@@ -1,1 +1,1 @@
-# automation-testNG-examples
+# TestNG examples
