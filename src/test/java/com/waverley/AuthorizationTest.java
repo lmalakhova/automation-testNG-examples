@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import java.util.stream.Stream;
 
 /**
- * Class was implemented for Test processing.
+ * Class was implemented for Test example processing.
  */
 public class AuthorizationTest extends BaseTest {
     @BeforeMethod
