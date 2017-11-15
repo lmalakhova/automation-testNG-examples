@@ -9,4 +9,8 @@ import lombok.Data;
 public class User {
     private final String firstName;
     private final String password;
+
+    public static User dummy() {
+        return new User("Dummy", "dummy");
+    }
 }

@@ -13,4 +13,3 @@ import java.lang.annotation.Target;
 public @interface TestStatus {
     String testStatus() default "open";
 }
-
