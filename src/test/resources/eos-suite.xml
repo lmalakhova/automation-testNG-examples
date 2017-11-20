@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="SmokeTest">
+    <test name="Chrome group">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.waverley.testcases.GoogleTests"/>
+        </classes>
+    </test>
+</suite>
