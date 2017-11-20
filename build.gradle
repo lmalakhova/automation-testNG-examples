@@ -18,7 +18,9 @@ dependencies {
             'org.projectlombok:lombok:1.16.18',
             'org.assertj:assertj-core:3.8.0',
             'com.google.code.gson:gson:2.8.2',
-            'io.vavr:vavr:0.9.1')
+            'io.vavr:vavr:0.9.1',
+            'org.seleniumhq.selenium:selenium-java:3.7.1',
+            'io.github.bonigarcia:webdrivermanager:1.7.2')
 }
 
 task wrapper(type: Wrapper) {
@@ -26,13 +28,11 @@ task wrapper(type: Wrapper) {
 }
 
 test {
-    testLogging {
-        showStandardStreams = false
-    }
-
     useTestNG() {
         listeners << 'io.github.sskorol.core.DataProviderTransformer'
         listeners << 'com.waverley.listeners.TestListener'
-        suites 'src/test/resources/smoke-suite.xml'
+        listeners << 'com.waverley.listeners.TestsListener'
+
+        suites 'src/test/resources/eos-suite.xml'
     }
 }
