@@ -20,7 +20,10 @@ dependencies {
             'com.google.code.gson:gson:2.8.2',
             'io.vavr:vavr:0.9.1',
             'org.seleniumhq.selenium:selenium-java:3.7.1',
-            'io.github.bonigarcia:webdrivermanager:1.7.2')
+            'io.github.bonigarcia:webdrivermanager:1.7.2',
+            'org.aeonbits.owner:owner-java8:1.0.9',
+            'org.jooq:joor:0.9.6'
+    )
 }
 
 task wrapper(type: Wrapper) {
@@ -31,7 +34,7 @@ test {
     useTestNG() {
         listeners << 'io.github.sskorol.core.DataProviderTransformer'
         listeners << 'com.waverley.listeners.MethodListener'
-        listeners << 'com.waverley.listeners.TestListener'
+        listeners << 'com.waverley.WebDriverListener'
 
         suites 'src/test/resources/eos-suite.xml'
     }
